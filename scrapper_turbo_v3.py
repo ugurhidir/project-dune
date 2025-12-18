@@ -77,7 +77,7 @@ def main():
     for start_price, end_price in price_ranges:
         print(f"\n💰 Segment: {start_price:,} - {end_price:,} AED")
         
-        for page_num in range(1, 101):
+        for page_num in range(1, 999):
             page_start_time = time.time()
             conn = sqlite3.connect(DB_NAME)
             
