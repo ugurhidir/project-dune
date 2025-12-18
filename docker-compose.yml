@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  dubai-bot:
+    build: .
+    container_name: dubai_scraper
+    restart: unless-stopped  # Çökse bile veya sunucu kapanıp açılsa bile tekrar başlar!
+    volumes:
+      # Veritabanını ve CSV'leri sunucuda kalıcı yapıyoruz.
+      # Konteyner silinse bile verilerin kaybolmaz.
+      - ./data:/app
+    environment:
+      - DISPLAY=:99
+    # Bellek Sınırı (Opsiyonel ama sağlıklı - Bot çıldırırsa sunucuyu kitlemesin)
+    deploy:
+      resources:
+        limits:
+          memory: 2G

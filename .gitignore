@@ -1,0 +1,22 @@
+# --- Python Çöpleri ---
+__pycache__/
+*.pyc
+
+# --- Sanal Ortam (ASLA GİTMEMELİ) ---
+venv/
+env/
+.venv/
+
+# --- Güvenlik (Çerezler ve Profiller) ---
+BenimProfilim/
+BrowserProfiles/
+*cookie*
+*session*
+
+# --- Geçici Veriler (İsteğe Bağlı) ---
+# Eğer veritabanını sunucuya taşıyacaksan *.db satırını sil veya yorum satırı yap (#)
+# *.db 
+
+# --- IDE Dosyaları ---
+.vscode/
+.idea/
