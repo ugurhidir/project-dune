@@ -11,6 +11,7 @@ services:
       - ./data:/app
     environment:
       - DISPLAY=:99
+    command: tail -f /dev/null
     # Bellek Sınırı (Opsiyonel ama sağlıklı - Bot çıldırırsa sunucuyu kitlemesin)
     deploy:
       resources:
